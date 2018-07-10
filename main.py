@@ -21,6 +21,11 @@ def bring_xml(url):
         print(itemlist[current_count].childNodes[0].nodeValue)
     return artifact_list
 
+import xmltodict
+
+with open(artifact_list) as fd:
+    doc = xmltodict.parse(fd.read())
+    print(artifact_list)
 
 app = Flask(__name__)
 
