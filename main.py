@@ -17,7 +17,7 @@ def bring_xml(url):
     max_count = len(itemlist)
     current_count = 0
     for current_count in range(max_count):
-        f = itemlist[current_count].childNodes[0].nodeValue
+        f = str(itemlist[current_count].childNodes[0].nodeValue)
         artifact_list.append(itemlist[current_count].childNodes[0].nodeValue)
         print(itemlist[current_count].childNodes[0].nodeValue)
     return artifact_list
